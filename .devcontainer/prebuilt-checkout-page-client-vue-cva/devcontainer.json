@@ -1,0 +1,28 @@
+{
+  "name": "prebuilt-checkout-page/client/vue-cva",
+  "dockerComposeFile": [
+    "docker-compose.yml",
+    "docker-compose.override.yml"
+  ],
+  "service": "web",
+  "workspaceFolder": "/work/prebuilt-checkout-page/client/vue-cva",
+  "hostRequirements": {
+    "cpus": 1,
+    "memory": "1gb"
+  },
+  "forwardPorts": [4242, 3000],
+  "portsAttributes": {
+    "4242": {
+      "label": "web",
+      "onAutoForward": "notify"
+    },
+    "3000": {
+      "label": "frontend",
+      "onAutoForward": "notify"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "silent"
+  }
+}
+

@@ -10,10 +10,14 @@
     "cpus": 1,
     "memory": "1gb"
   },
-  "forwardPorts": [4242],
+  "forwardPorts": [4242, 3000],
   "portsAttributes": {
     "4242": {
       "label": "web",
+      "onAutoForward": "notify"
+    },
+    "3000": {
+      "label": "frontend",
       "onAutoForward": "notify"
     }
   },
